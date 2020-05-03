@@ -59,10 +59,6 @@ function Project({ project, path }) {
           </div>
           <p className="description">{project.description}</p>
           <div className="cta">
-            <a className="button-azure" href="#">
-              <AzureIcon w={24} h={24} />
-              Deploy to Azure
-            </a>
             <a
               className="button-github"
               href={project.html_url}
