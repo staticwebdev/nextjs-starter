@@ -58,6 +58,17 @@ h1 {
   display: flex;
 }
 
+.project .masthead {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+}
+
+.project .masthead-logo {
+  width: 100px;
+  margin: 6px auto 2px;
+}
+
 .project > aside {
   background-color: #ffffff;
   height: 100vh;
@@ -74,7 +85,6 @@ h1 {
 }
 
 .project h3 {
-  text-transform: uppercase;
   font-size: 18px;
   text-align: center;
   padding-bottom: 30px;
