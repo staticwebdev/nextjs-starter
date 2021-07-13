@@ -11,7 +11,14 @@ const Home = (props) => (
     <div className="card-grid">
       {props.projects.map((project) => {
         const Icon = projectIcons[project.id];
-        return <SmallCard key={project.id} Icon={Icon} title={project.name} slug={project.slug} />;
+        
+        return (
+          <SmallCard
+            key={project.id}
+            Icon={Icon}
+            title={project.name}
+            slug={project.slug} />
+        );
       })}
     </div>
   </div>
