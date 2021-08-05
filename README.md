@@ -53,7 +53,7 @@ module.exports = {
 ```
 ### Build scripts
 
-The npm `build` script is updated to not only build the application, but also generate all the static files to the _out_ folder.
+The npm `build` script runs commands to not only build the application, but also generate all the static files to the _out_ folder.
 
 ```json
 "scripts": {
