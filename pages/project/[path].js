@@ -1,18 +1,14 @@
-import fetch from 'isomorphic-unfetch';
 import {
   StarIcon,
   WatchIcon,
   BugIcon,
-  AzureIcon,
   GithubIcon,
   projectIcons
 } from '../../components/Icons';
 import { projects } from '../../utils/projectsData';
 
-function Project({ project, path }) {
-  const projectData = projects.find(project => project.slug === path);
-  const Icon = projectIcons[projectData.id]
-  console.log(path);
+function Project({ project }) {
+  const Icon = projectIcons[project.id]
   return (
     <div className="project">
       <aside>
@@ -74,14 +70,18 @@ function Project({ project, path }) {
   );
 }
 
-Project.getInitialProps = async function (context) {
-  const { path } = context.query;
-  const projectData = projects.find(project => project.slug === path);
-  const ghPath = projectData.path;
-  
-  const res = await fetch(`https://api.github.com/repos/${ghPath}`);
-  const project = await res.json();
-  return { project, path };
-};
+export async function getStaticPaths() {
+
+  const paths = projects.map((project) => ({
+    params: { path: project.slug },
+  }))
+
+  return { paths, fallback: false };
+}
+
+export async function getStaticProps({ params }) {
+  const project = projects.find(proj => proj.slug === params.path);
+  return { props: { project } };
+}
 
 export default Project;
