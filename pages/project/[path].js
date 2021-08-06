@@ -41,7 +41,7 @@ function Project({ project }) {
             <div className="stats-details">
               <div>
                 <WatchIcon w={18} h={18} />
-                <p>{project.watchers_count}</p>
+                <p>{project.subscribers_count}</p>
               </div>
               <p>watchers</p>
             </div>
