@@ -9,7 +9,14 @@ const Home = () => (
     <div className="card-grid">
       {projects.map((project) => {
         const Icon = projectIcons[project.id];
-        return <SmallCard key={project.id} Icon={Icon} title={project.name} slug={project.slug} />;
+        return (
+          <SmallCard
+            key={project.id}
+            Icon={Icon}
+            title={project.name}
+            slug={project.slug}
+          />
+        );
       })}
     </div>
   </div>
