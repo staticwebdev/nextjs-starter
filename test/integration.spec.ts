@@ -10,3 +10,11 @@ test('should navigate to the react page', async ({ page }) => {
     // The new page should contain an h3 with "You can deploy..."
     await expect(page.locator('.project')).toContainText('Home')
 })
+
+test('should have stats', async ({ page }) => {
+    // Start from the index page (the baseURL is set via the webServer in the playwright.config.ts)
+    await page.goto('/project/facebook-react/')
+    // The new page should contain stats, there should be more than 100k starts for react
+    const numberOfStars = await page.innerText('.stats-details:first-of-type div p')
+    expect(Number(numberOfStars)).toBeGreaterThan(100000);
+})
