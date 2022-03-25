@@ -6,7 +6,7 @@ test('should navigate to the react page', async ({ page }) => {
     // Find an element with the text 'About Page' and click on it
     await page.click('text=React')
     // The new url should be "/project/facebook-react/" (baseURL is used there)
-    await expect(page).toHaveURL('/project/facebook-react/')
+    await expect(page).toHaveURL('/project/facebook-react-foo/')
     // The new page should contain an h3 with "You can deploy..."
     await expect(page.locator('.project')).toContainText('Home')
 })
