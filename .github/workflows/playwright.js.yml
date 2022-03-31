@@ -34,9 +34,3 @@ jobs:
       run: npm run build
     - name: Run your tests
       run: npm run test
-    - name: Upload test results
-      if: always()
-      uses: actions/upload-artifact@v2
-      with:
-        name: playwright-results
-        path: test-results
