@@ -24,6 +24,6 @@ test('goes back to home page', async ({ page }) => {
     await page.goto('/project/nuxt-nuxtjs/')
     // Find an element with the text 'Home' and click on it
     await page.click('text=Home')
-    // The new page should be the home page and contain an h1 with 'What Can I Deploy to Static Apps?'
+    // The new page should be the home page and contain an h1 with 'What Can I Deploy to Static Apps?' 
     await expect(page).toHaveURL('/')
 })
