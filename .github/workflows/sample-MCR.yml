@@ -1,0 +1,17 @@
+on: 
+ workflow_dispatch:
+
+jobs:
+  oryx_build_job:
+    runs-on: ubuntu-latest
+    name: Oryx build
+    steps:
+      # To use this repository's private action,
+      # you must check out the repository
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Oryx build step
+        uses: snehapar9/jamstack-composite-action@snehapar/oryx-build
+        id: oryx-build
+        with:
+          app-location: ./
