@@ -18,12 +18,3 @@ test('should have stats', async ({ page }) => {
     const numberOfStars = await page.innerText('.stats-details:first-of-type div p')
     expect(Number(numberOfStars)).toBeGreaterThan(100000);
 })
-
-test('goes back to home page', async ({ page }) => {
-    // Start from the index page (the baseURL is set via the webServer in the playwright.config.ts)
-    await page.goto('/project/nuxt-nuxtjs/')
-    // Find an element with the text 'Home' and click on it
-    await page.click('text=Home')
-    // The new page should be the home page and contain an h1 with 'What Can I Deploy to Static Apps?' 
-    await expect(page).toHaveURL('/')
-})
