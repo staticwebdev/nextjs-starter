@@ -7,8 +7,7 @@
     "dev": "next dev",
     "fix": "next lint --fix",
     "lint": "next lint",
-    "start": "next start",
-    "test": "playwright test"
+    "start": "next start"
   },
   "dependencies": {
     "isomorphic-unfetch": "^3.0.0",
@@ -17,7 +16,6 @@
     "react-dom": "^17.0.2"
   },
   "devDependencies": {
-    "@playwright/test": "^1.20.0",
     "eslint": "^8.11.0",
     "eslint-config-next": "^12.1.0",
     "eslint-config-prettier": "^8.5.0",
