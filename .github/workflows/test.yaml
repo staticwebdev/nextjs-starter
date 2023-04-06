@@ -12,7 +12,8 @@ on:
   # Allow mannually trigger 
   workflow_dispatch:
 jobs: 
-  Minimal-Build-app-for-Container-App:
+  Minimal-Build-application-for-Container-app:
+    runs-on: ubuntu
     steps: 
       - name : Log in to Azure
         uses: azure/login@v1
