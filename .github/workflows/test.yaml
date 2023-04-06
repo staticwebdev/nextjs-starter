@@ -24,3 +24,4 @@ jobs:
         with:
           appSourcePath: ${{ github.workspace }}
           acrName: jamstacktest  
+          resourceGroup: snehapar-test
