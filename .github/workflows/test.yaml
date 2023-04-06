@@ -1,0 +1,25 @@
+name: Run validation on action
+
+on:
+  # Automatically trigger it when detected changes in repo
+  push:
+    branches: 
+      [ main ]
+    paths:
+    - '**'
+    - '.github/workflows/container-app-sample-AutoDeployTrigger-f9592e1e-9d15-4236-90db-8a0f848e3493.yml'
+
+  # Allow mannually trigger 
+  workflow_dispatch:
+jobs: 
+  Minimal-Build-app-for-Container-App:
+    steps: 
+      - name : Log in to Azure
+        uses: azure/login@v1
+        with: 
+          creds: ${{ secretes.AZURE_CREDENTIALs }}  
+      - name: Build and deploy Container App
+        uses: azure/container-apps-deploy-action@v0
+        with:
+          appSourcePath: ${{ github.workspace }}
+          acrName: jamstacktest  
