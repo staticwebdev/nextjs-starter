@@ -14,7 +14,19 @@ on:
 jobs: 
   test:
     runs-on: ubuntu-latest
+    env:
+      TEST_IMAGE_TAG: 'test-image-${{ github.run_id }}'
+      TEST_CONTAINER_APP_NAME: 'snehapar-container-app-sample'
+
     steps: 
+      - name: Checkout action repository
+        uses: actions/checkout@v3
+
+      - name: Clone Oryx repository
+        uses: actions/checkout@v3
+        with:
+          repository: microsoft/Oryx
+          path: oryx
       - name : Log in to Azure
         uses: azure/login@v1
         with: 
