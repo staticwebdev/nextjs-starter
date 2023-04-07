@@ -11,6 +11,9 @@ on:
 
   # Allow mannually trigger 
   workflow_dispatch:
+env:
+  TEST_FULL_ACR_NAME: ${{ vars.TEST_ACR_NAME }}.azurecr.io
+  TEST_IMAGE_REPOSITORY: github-actions/container-app  
 jobs: 
   test:
     runs-on: ubuntu-latest
