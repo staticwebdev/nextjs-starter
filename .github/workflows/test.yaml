@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       TEST_IMAGE_TAG: 'test-image-${{ github.run_id }}'
-      TEST_CONTAINER_APP_NAME: 'snehapar-container-app-sample'
+      TEST_CONTAINER_APP_NAME: 'container-app-sample'
 
     steps: 
       - name: Checkout action repository
