@@ -226,12 +226,12 @@ export function AzureIcon() {
   );
 }
 
-export function GithubIcon() {
+export function GithubIcon({ w, h }) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
+      width={w}
+      height={h}
       fill="none"
       viewBox="0 0 24 24"
     >
