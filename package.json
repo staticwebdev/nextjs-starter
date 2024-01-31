@@ -22,5 +22,8 @@
     "eslint-plugin-prettier": "^4.0.0",
     "prettier": "^2.6.0",
     "serve": "^14.2.1"
+  },
+  "engines": {
+    "node": "18.17.1"
   }
 }
