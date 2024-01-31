@@ -11,16 +11,19 @@
   },
   "dependencies": {
     "isomorphic-unfetch": "^3.0.0",
-    "next": "^13.5.2",
+    "next": "13.5.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "eslint": "^8.11.0",
-    "eslint-config-next": "^13.5.2",
+    "eslint-config-next": "13.5.2",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.0.0",
     "prettier": "^2.6.0",
     "serve": "^14.2.1"
+  },
+  "engines": {
+    "node": "18.17.1"
   }
 }
